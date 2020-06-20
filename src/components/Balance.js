@@ -11,10 +11,12 @@ export const Balance = () => {
   .reduce((total, item) => (total += item.amount), 0)
   .toFixed(2);
 
+  const fontCss = bal<0 ? "minus":"plus";
+
   return (
     <div className="center">
       <h4>Your Balance</h4>
-      <h1 className={"money " + (bal<0 ? "minus":"plus")}>PKR {bal}</h1>
+      <h1 className={`money ${fontCss}`}>PKR {bal}</h1>
     </div>
   );
 };

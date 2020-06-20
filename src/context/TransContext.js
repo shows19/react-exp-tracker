@@ -48,8 +48,7 @@ export const TransContextProvider = ({ children }) => {
     
   return (
     <TransContext.Provider value={{trans, setTrans, deleteTrans, addTrans, loadTestTrans}}>
-      {" "}
-      {children}{" "}
+        {children}
     </TransContext.Provider>
   );
 };
